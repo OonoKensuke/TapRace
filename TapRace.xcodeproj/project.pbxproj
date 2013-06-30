@@ -139,8 +139,10 @@
 		0C3DE706177F53E60075DB04 /* vec4.c in Sources */ = {isa = PBXBuildFile; fileRef = 0C3DE705177F53E60075DB04 /* vec4.c */; };
 		0C3DE70B177F53E70075DB04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3DE70A177F53E70075DB04 /* main.m */; };
 		0C3DE70E177F53E70075DB04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3DE70D177F53E70075DB04 /* AppDelegate.m */; };
-		0C3DE711177F53E70075DB04 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3DE710177F53E70075DB04 /* HelloWorldLayer.m */; };
-		0C3DE714177F53E70075DB04 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3DE713177F53E70075DB04 /* IntroLayer.m */; };
+		0C3DE71F177F56890075DB04 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3DE71E177F56890075DB04 /* GameScene.m */; };
+		0C3DE722177F5ED40075DB04 /* stage-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C3DE720177F5ED30075DB04 /* stage-hd.png */; };
+		0C3DE723177F5ED40075DB04 /* stage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C3DE721177F5ED30075DB04 /* stage.png */; };
+		0C3DE729177F61D10075DB04 /* Gun.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3DE728177F61D00075DB04 /* Gun.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -421,10 +423,12 @@
 		0C3DE70A177F53E70075DB04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0C3DE70C177F53E70075DB04 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0C3DE70D177F53E70075DB04 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0C3DE70F177F53E70075DB04 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
-		0C3DE710177F53E70075DB04 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
-		0C3DE712177F53E70075DB04 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
-		0C3DE713177F53E70075DB04 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
+		0C3DE71D177F56890075DB04 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		0C3DE71E177F56890075DB04 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		0C3DE720177F5ED30075DB04 /* stage-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "stage-hd.png"; path = "resouce/stage-hd.png"; sourceTree = SOURCE_ROOT; };
+		0C3DE721177F5ED30075DB04 /* stage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stage.png; path = resouce/stage.png; sourceTree = SOURCE_ROOT; };
+		0C3DE727177F61D00075DB04 /* Gun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gun.h; sourceTree = "<group>"; };
+		0C3DE728177F61D00075DB04 /* Gun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gun.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -487,10 +491,10 @@
 			children = (
 				0C3DE70C177F53E70075DB04 /* AppDelegate.h */,
 				0C3DE70D177F53E70075DB04 /* AppDelegate.m */,
-				0C3DE70F177F53E70075DB04 /* HelloWorldLayer.h */,
-				0C3DE710177F53E70075DB04 /* HelloWorldLayer.m */,
-				0C3DE712177F53E70075DB04 /* IntroLayer.h */,
-				0C3DE713177F53E70075DB04 /* IntroLayer.m */,
+				0C3DE71D177F56890075DB04 /* GameScene.h */,
+				0C3DE71E177F56890075DB04 /* GameScene.m */,
+				0C3DE727177F61D00075DB04 /* Gun.h */,
+				0C3DE728177F61D00075DB04 /* Gun.m */,
 				0C3DE57C177F53E30075DB04 /* Resources */,
 				0C3DE594177F53E30075DB04 /* libs */,
 				0C3DE708177F53E60075DB04 /* Supporting Files */,
@@ -513,6 +517,8 @@
 				0C3DE58F177F53E30075DB04 /* Icon@2x.png */,
 				0C3DE591177F53E30075DB04 /* Info.plist */,
 				0C3DE592177F53E30075DB04 /* iTunesArtwork */,
+				0C3DE720177F5ED30075DB04 /* stage-hd.png */,
+				0C3DE721177F5ED30075DB04 /* stage.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -942,6 +948,8 @@
 				0C3DE590177F53E30075DB04 /* Icon@2x.png in Resources */,
 				0C3DE593177F53E30075DB04 /* iTunesArtwork in Resources */,
 				0C3DE6EC177F53E60075DB04 /* ChangeLog in Resources */,
+				0C3DE722177F5ED40075DB04 /* stage-hd.png in Resources */,
+				0C3DE723177F5ED40075DB04 /* stage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1062,8 +1070,8 @@
 				0C3DE706177F53E60075DB04 /* vec4.c in Sources */,
 				0C3DE70B177F53E70075DB04 /* main.m in Sources */,
 				0C3DE70E177F53E70075DB04 /* AppDelegate.m in Sources */,
-				0C3DE711177F53E70075DB04 /* HelloWorldLayer.m in Sources */,
-				0C3DE714177F53E70075DB04 /* IntroLayer.m in Sources */,
+				0C3DE71F177F56890075DB04 /* GameScene.m in Sources */,
+				0C3DE729177F61D10075DB04 /* Gun.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
